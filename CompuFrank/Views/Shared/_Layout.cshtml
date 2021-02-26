@@ -11,13 +11,34 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CompuFrank</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <font size="2">Llámanos ahora: 632XXX330</font>
+                </a>
+
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
+                    <partial name="_LoginPartial" />        <!--BOTONES DE LOGIN Y REGISTER -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mc-image">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+            <p>
+                <font color="white">XXXXXXXXXXXXXXXX</font>
+                <img width="300" height="80" src="~/pictures/1_inicio.png" class="lazyload">
+            </p>
+        </a>
+        
+    </div>
+
+
+        <!--  NUEVO BOTON DE NAVEGACION -->
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    @*<partial name="_LoginPartial" />*@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
@@ -29,25 +50,30 @@
                 </div>
             </div>
         </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        <!--  NUEVO BOTON DE NAVEGACION -->
 
 
 
 
-
-    <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - Franklin Sangoquiza Moposita - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+
+
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - Franklin Sangoquiza Moposita - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+
+
+
 </body>
 </html>
