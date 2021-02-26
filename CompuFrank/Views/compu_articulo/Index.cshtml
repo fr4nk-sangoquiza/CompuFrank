@@ -47,7 +47,7 @@
                 @Html.DisplayFor(modelItem => item.descripcion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.url_imagen)
+                <a href="@Html.DisplayFor(modelItem => item.url_imagen)">enlace</a>
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
