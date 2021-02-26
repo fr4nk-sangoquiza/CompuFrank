@@ -30,7 +30,7 @@ namespace CompuFrank.Models
         [Display(Name = "Descripción")]
         public string descripcion { get; set; }
 
-        [Display(Name = "URL")]
+        [Display(Name = "URL imagen")]
         public string url_imagen { get; set; }
 
 
