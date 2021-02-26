@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using CompuFrank.Models;
 
 namespace CompuFrank.Data
 {
@@ -12,5 +13,6 @@ namespace CompuFrank.Data
             : base(options)
         {
         }
+        public DbSet<CompuFrank.Models.compu_articulos> compu_articulos { get; set; }
     }
 }
