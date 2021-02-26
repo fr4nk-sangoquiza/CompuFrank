@@ -22,16 +22,6 @@
         </nav>
     </header>
 
-    <div class="mc-image">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">
-            <p>
-                <font color="white">XXXXXXXXXXXXXXXX</font>
-                <img width="300" height="80" src="~/pictures/1_inicio.png" class="lazyload">
-            </p>
-        </a>
-        
-    </div>
-
 
         <!--  NUEVO BOTON DE NAVEGACION -->
 
@@ -41,17 +31,32 @@
                     @*<partial name="_LoginPartial" />*@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                            <div class="container">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                                    <img width="178" height="47" src="~/pictures/1_inicio.png" class="lazyload">
+                                </a>
+
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="compu_articulo" asp-action="Index">Productos</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">ORDENADORES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">SOFTWARE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">PERIFÉRICOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">ACCESORIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="compu_articulo" asp-action="Index">PRODUCTOS</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!--  NUEVO BOTON DE NAVEGACION -->
-
 
 
 
