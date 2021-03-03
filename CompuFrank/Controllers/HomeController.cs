@@ -1,11 +1,14 @@
-﻿using CompuFrank.Models;
+﻿using CompuFrank.Data;
+using CompuFrank.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace CompuFrank.Controllers
 {
@@ -22,6 +25,25 @@ namespace CompuFrank.Controllers
         {
             return View();
         }
+
+
+
+        /*  CAROUSEL QUE USA IMG DE PRODUCTOS */
+
+        //private readonly ApplicationDbContext _context;
+
+        //public HomeController(ApplicationDbContext context)
+        //{
+        //    _context = context;
+        //}
+        //public async Task<IActionResult> Index()
+        //{
+        //    return View(await _context.compu_articulos.ToListAsync());
+        //    //return View();
+        //}
+
+        /*************************************/
+
 
         public IActionResult Privacy()
         {
