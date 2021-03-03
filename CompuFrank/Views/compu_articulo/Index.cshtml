@@ -47,7 +47,11 @@
                 @Html.DisplayFor(modelItem => item.descripcion)
             </td>
             <td>
-                <a target="_blank" href="@Html.DisplayFor(modelItem => item.url_imagen)">enlace</a>
+                @*<a target="_blank" href="@Html.DisplayFor(modelItem => item.url_imagen)">enlace</a>*@
+                @{ if (item.url_imagen != null)
+                    {
+                        <img src='@Html.DisplayFor(modelItem => item.url_imagen)' style="width:50%">
+                    }}
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Editar</a> |

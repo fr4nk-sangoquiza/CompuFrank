@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CompuFrank.Data;
 using CompuFrank.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CompuFrank.Views.compu_articulo
 {
@@ -44,6 +45,8 @@ namespace CompuFrank.Views.compu_articulo
         }
 
         // GET: compu_articulo/Create
+
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -66,6 +69,7 @@ namespace CompuFrank.Views.compu_articulo
         }
 
         // GET: compu_articulo/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -117,6 +121,7 @@ namespace CompuFrank.Views.compu_articulo
         }
 
         // GET: compu_articulo/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

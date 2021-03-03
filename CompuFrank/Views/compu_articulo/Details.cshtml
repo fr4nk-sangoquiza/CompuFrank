@@ -38,7 +38,11 @@
             @Html.DisplayNameFor(model => model.url_imagen)
         </dt>
         <dd class="col-sm-10">
-            <a target="_blank" href="@Html.DisplayFor(model => model.url_imagen)">enlace</a>
+            @*<a target="_blank" href="@Html.DisplayFor(model => model.url_imagen)">enlace</a>*@
+            @{ if (Model.url_imagen != null)
+                {
+                    <img src='@Html.DisplayFor(modelItem => Model.url_imagen)' style="width:50%">
+                }}
         </dd>
     </dl>
 </div>
