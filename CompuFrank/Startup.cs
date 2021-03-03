@@ -1,6 +1,7 @@
 using CompuFrank.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -12,13 +13,13 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace CompuFrank
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -83,6 +84,7 @@ namespace CompuFrank
                 facebookOption.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
             });
 
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
@@ -103,6 +105,7 @@ namespace CompuFrank
                 SupportedCultures = new List<CultureInfo> { defaultCulture },
                 SupportedUICultures = new List<CultureInfo> { defaultCulture }
             };
+
 
 
             if (env.IsDevelopment())
