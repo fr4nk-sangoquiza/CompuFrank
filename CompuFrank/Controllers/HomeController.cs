@@ -51,6 +51,26 @@ namespace CompuFrank.Controllers
             return View();
         }
 
+        public IActionResult ordenadores()      //NEW GET  Home/*.cshtml
+        {
+            return View();
+        }
+
+        public IActionResult software()         //NEW GET  Home/*.cshtml
+        {
+            return View();
+        }
+
+        public IActionResult perifericos()      //NEW GET  Home/*.cshtml
+        {
+            return View();
+        }
+
+        public IActionResult accesorios()      //NEW GET  Home/*.cshtml
+        {
+            return View();
+        }
+
         public IActionResult contacto()         // MÉTODO GET. Entra a este fichero y me va a retornar la página
         {                                       // creada Home/contacto.cshtml
             return View();
