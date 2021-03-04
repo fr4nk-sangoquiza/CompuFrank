@@ -20,6 +20,44 @@ namespace CompuFrank.Views.compu_articulo
             _context = context;
         }
 
+                         /*************** METODO PARA FILTRO DE BÚSQUEDA *****************/
+        /*
+        public IList<compu_articulos> compu_articulos { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string valor_busqueda { get; set; }  //variable donde se guarda lo que introduce el usuario
+
+        public SelectList categoria { get; set; }      //Variable donde tenemos la lista de los géneros
+
+        [BindProperty(SupportsGet = true)]
+        public string generoPelicula { get; set; }  //Variabale que guarda el género de la lista elegido por el usuario
+
+        public async Task OnGetAsync()
+        {
+            var peliculas = from m in _context.compu_articulos
+                            select m;
+            if (!string.IsNullOrEmpty(valor_busqueda))  // Si lo que se ha buscado no es nulo o vacío
+            {
+                peliculas = peliculas.Where(s => s.producto.Contains(valor_busqueda));
+            }
+
+            IQueryable<string> generoQuery = from m in _context.compu_articulos
+                                             orderby m.categoria
+                                             select m.categoria;
+            if (!string.IsNullOrEmpty(generoPelicula))
+            {
+                peliculas = peliculas.Where(s => s.categoria == generoPelicula);
+
+            }
+
+            //Movie = await _context.Movie.ToListAsync();
+            categoria = new SelectList(await generoQuery.Distinct().ToListAsync());       // Filtrar por género
+            compu_articulos = await peliculas.ToListAsync();     //Para mostrar solo la variable pelicula que contiene la búsqueda
+        }
+        */
+                                    /******************************************************/
+
+
         // GET: compu_articulo
         public async Task<IActionResult> Index()
         {

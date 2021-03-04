@@ -7,6 +7,18 @@
 
 <h3>PRODUCTOS</h3>
 
+@*<br />
+<form>
+    <p>
+        Filtrar por título: &nbsp;<input type="text" asp-for="valor_busqueda" />
+        <input type="submit" value="Filtrar" />        Enviar la petición
+        &nbsp;<select asp-for="generoPelicula" asp-items="Model.categoria">
+            <option value="">Todo</option>
+        </select>
+    </p>
+</form>*@
+
+
 <p>
     <a asp-action="Create">Crear nuevo</a>
 </p>
@@ -32,33 +44,34 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.producto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.categoria)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.precio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.descripcion)
-            </td>
-            <td>
-                @*<a target="_blank" href="@Html.DisplayFor(modelItem => item.url_imagen)">enlace</a>*@
-                @{ if (item.url_imagen != null)
-                    {
-                        <img src='@Html.DisplayFor(modelItem => item.url_imagen)' style="width:50%">
-                    }}
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Borrar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.producto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.categoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.precio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descripcion)
+                </td>
+                <td>
+                    @*<a target="_blank" href="@Html.DisplayFor(modelItem => item.url_imagen)">enlace</a>*@
+                    @{ if (item.url_imagen != null)
+                        {
+                            <img src='@Html.DisplayFor(modelItem => item.url_imagen)' style="width:50%">
+                        }}
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.id">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id">Borrar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
