@@ -1,5 +1,30 @@
-﻿@{
+﻿@model IEnumerable<CompuFrank.Models.compu_articulos>
+@{
     ViewData["Title"] = "ORDENADORES";
 }
 
 <h3>@ViewData["Title"]</h3>
+
+<br/><br />
+
+<div class="container">
+    <div class="row">
+
+        <!-- ORDENADORES -->
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter drama">
+            <a href="~/compu_articulo/Details/5">
+                <img width="157" height="233" src=https://images-na.ssl-images-amazon.com/images/I/61dl9eXHPSL._AC_SL1000_.jpg class="img-responsive">
+            </a>
+            <div class="mtitle"><font color="blue">Ordenador Gaming PC AMD Ryzen 5 3500X</font></div><br />
+        </div>
+
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter drama">
+            <a href="~/compu_articulo/Details/6">
+                <img width="257" height="233" src=https://images-na.ssl-images-amazon.com/images/I/71k4aPUqL4L._AC_SL1200_.jpg class="img-responsive">
+            </a>
+            <div class="mtitle"><font color="blue">ASUS TUF Gaming A15 FX506LH-BQ034</font></div><br />
+        </div>
+    </div>
+</div>
